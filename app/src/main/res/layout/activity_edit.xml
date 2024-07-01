@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tbEdit"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/AppTheme.ToolbarCustomise"
+            app:subtitle="Student List"
+
+            app:title="Student Info"
+            app:titleTextColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Student List"
+                    android:textColor="@android:color/holo_orange_light"
+                    android:textSize="20sp"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                <ImageButton
+                    android:id="@+id/imgBtnSearch"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/search_icon" />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvAllStudentList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <TextView
+        android:id="@+id/tvEmptyMessageDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+        android:textSize="17sp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+</android.support.design.widget.CoordinatorLayout>
